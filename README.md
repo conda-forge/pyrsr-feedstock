@@ -5,11 +5,9 @@ Home: https://gitext.gfz-potsdam.de/geomultisens/pyrsr
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyrsr-feedstock/blob/master/LICENSE.txt)
 
 Summary: A package providing relative spectral response functions for remote sensing instruments.
-
-
 
 Current build status
 ====================
