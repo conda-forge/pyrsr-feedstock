@@ -1,5 +1,5 @@
 {% set name = "pyrsr" %}
-{% set version = "0.3.8" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyrsr-{{ version }}.tar.gz
-  sha256: ffa14176a5f546072ee329e7b02f5e65967c254386c43ea9ec2e9e3a81d2709f
+  sha256: d1e9479485861dfea858538a2064c63a0d3615d81053b161750c00f3603904f3
 
 build:
   number: 0
