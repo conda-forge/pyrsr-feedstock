@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  name: pyrsr
+  version: "0.7.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyrsr-${{ version }}.tar.gz
+  sha256: ca84ae61e958dd99ab30992d5c29f37dbfa6f63914420dbe91950d8372488b56
+
+build:
+  number: 3
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+    - setuptools-git
+  run:
+    - matplotlib-base
+    - numpy
+    - pandas
+    - python >=${{ python_min }}
+    - scipy
+
+tests:
+  - python:
+      imports:
+        - pyrsr
+        - pyrsr.rsr
+        - pyrsr.sensorspecs
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: A package providing relative spectral response functions for remote sensing instruments.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://git.gfz-potsdam.de/geomultisens/pyrsr
+
+extra:
+  recipe-maintainers:
+    - danschef
