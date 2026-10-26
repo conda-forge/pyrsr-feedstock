@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyrsr
-  version: "0.7.0"
+  version: "0.8.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyrsr-${{ version }}.tar.gz
-  sha256: ca84ae61e958dd99ab30992d5c29f37dbfa6f63914420dbe91950d8372488b56
+  sha256: bdb023a4aca50476db66561c65fc94f7e572df1b091736e784ce06d6a97a55ad
 
 build:
-  number: 3
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
